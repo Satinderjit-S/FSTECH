@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,49 +14,94 @@
     android:background="#0b0a0a"><![CDATA[
 
     >
-]]>
+
+
+    ]]>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="@drawable/customborder"
-        android:showDividers="end"
-        android:outlineProvider="background"
         android:divider="#1e1a1a"
-        android:paddingBottom="5dp">
+        android:orientation="horizontal"
+        android:outlineProvider="background"
+        android:paddingBottom="5dp"
+        android:showDividers="end">
 
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
-            android:id="@+id/imageView"
-            android:src="@drawable/logo"
-            android:background="#aa8e53"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView2"
-            android:src="@drawable/logouss"
-            android:layout_weight="2"
-            android:background="#aa8e53" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView3"
-            android:src="@drawable/logo"
             android:layout_weight="1"
-            android:background="#aa8e53" />
+            android:background="#aa8e53"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#aa8e53"
+            android:src="@drawable/logouss" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#aa8e53"
+            android:src="@drawable/logo" />
     </LinearLayout>
 
-    <ExpandableListView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/mainlistview"
-        android:paddingTop="10dp"
-        android:background="#aa8e53" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="220dp"
+        android:layout_weight="5"
+        android:background="#aa8e53"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/SpinnerTheme"
+            android:layout_width="149dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+
+            android:layout_weight="3"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center" />
+
+        <ImageButton
+            android:id="@+id/lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#8F7645"
+            android:outlineAmbientShadowColor="#002B2121"
+            app:srcCompat="@drawable/lock" />
+
+        <ImageButton
+            android:id="@+id/unlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#8F7645"
+            android:outlineAmbientShadowColor="#002B2121"
+            app:srcCompat="@drawable/unlock" />
+
+
+    </LinearLayout>
 
 </LinearLayout>
+
+
+
 
